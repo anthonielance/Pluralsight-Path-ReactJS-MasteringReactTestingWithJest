@@ -1,9 +1,9 @@
 'use strict';
-let React = require('react/addons');
+let React = require('react');
 let conversionHelper = require('./../helpers/conversionHelper');
 let itemsHelper = require('./../helpers/itemsHelper');
 
-module.export = React.createClass({
+module.exports = React.createClass({
     getDefaultProps: function() {
         return {
             item: {
@@ -19,7 +19,7 @@ module.export = React.createClass({
         return conversionHelper.getSymbolForCountry(this.props.locale.country);
     },
     getLocalizedPriceString() {
-        let price = conversionHelper.convertFromUSD(this.props.locale.country, this.props.locale.item.priceUSD);
+        let price = conversionHelper.convertFromUSD(this.props.locale.country, this.props.item.priceUSD);
         let currencyString = conversionHelper.toCurrencyString(price);
         return currencyString;
     },

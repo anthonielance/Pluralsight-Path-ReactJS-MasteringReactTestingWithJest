@@ -1,11 +1,11 @@
-var restHeler = require('./../helpers/restHelper');
-var dispatcher = requier('./../dispatcher');
+var restHelper = require('./../helpers/restHelper');
+var dispatcher = require('./../dispatcher');
 
 var localeInfo = {};
 var changeListeners = [];
 class LocalizationStore {
     constructor() {
-        restHeler.get('locale')
+        restHelper.get('locale')
             .then((locale) => {
                 localeInfo = locale;
                 this.triggerListeners();

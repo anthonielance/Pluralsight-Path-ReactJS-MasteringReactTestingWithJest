@@ -9,8 +9,8 @@ module.exports = {
                 type: 'GET',
                 url: url,
                 dataType: 'json',
-                success,
-                error
+                success: success,
+                error: error
             });
         });
     },
@@ -19,8 +19,8 @@ module.exports = {
             $.ajax({
                 url: url,
                 type: 'DELETE',
-                success,
-                error
+                success: success,
+                error: error
             });
         });
     }

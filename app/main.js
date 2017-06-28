@@ -1,4 +1,5 @@
-let React = require('react/addons');
+let React = require('react');
+let ReactDOM = require('react-dom');
 
 let CartItemList = require('./components/CartItemList');
 
@@ -13,7 +14,7 @@ let CartApp = React.createClass({
         return (
             <div>
                 <LocalizationBox />
-                <h3>Your Car ({this.props.items.length})</h3>
+                <h3>Your Cart ({this.props.items.length})</h3>
                 <CartItemList {...this.props} />
                 <TotalBox {...this.props} />
             </div>
@@ -36,7 +37,7 @@ localizationStore.onChange(() => {
 
 let render = () => {
     if (typeof window !== 'undefined') {
-        React.render(<CartApp items={items} locale={locale} />,
+        ReactDOM.render(<CartApp items={items} locale={locale} />,
         document.getElementById('mount'));
     }
 }
