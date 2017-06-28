@@ -1,10 +1,10 @@
-var restHeler = require('./../helpers/restHelper');
+var restHelper = require('./../helpers/restHelper');
 
 var conversions = {};
 var changeListeners = [];
 class RatesStore {
     constructor() {
-        restHeler.get('rates')
+        restHelper.get('rates')
             .then((conversionRates) => {
                 conversions = conversionRates;
                 this.triggerListeners();
