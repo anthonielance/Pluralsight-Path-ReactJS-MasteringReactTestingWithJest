@@ -17,14 +17,19 @@
         ],
         "moduleFileExtensions": [
             "es6",
-            "js"
+            "js",
+            "json"
         ],
         "collectCoverage": true,
-        "unmockedModulePathPatterns": ["react","react-dom","jquery"]
+        "unmockedModulePathPatterns": [
+            "react"
+        ]
     },
     "dependencies": {
         "babel-preset-es2015": "^6.1.18",
+        "babel-preset-react": "^6.1.18",
         "babel-preset-stage-0": "^6.3.13",
+        "browserify": "^12.0.1",
         "ejs": "^2.3.4",
         "express": "^4.13.3",
         "flux": "^2.1.1",
@@ -41,13 +46,13 @@
         "babel-core": "^6.3.15",
         "babel-jest": "^6.0.1",
         "babel-loader": "^6.2.0",
-        "babel-preset-react": "^6.1.18",
+        "babel-preset-react": "^6.3.13",
         "babelify": "^7.2.0",
         "bower": "^1.8.0",
         "browserify": "^12.0.1",
         "d3": "^3.5.10",
         "gulp-nodemon": "^2.0.4",
-        "jest-cli": "^0.7.1",
+        "jest-cli": "^0.8.1",
         "nodemon": "^1.8.1",
         "react-tools": "^0.13.3",
         "webpack": "^1.12.9"

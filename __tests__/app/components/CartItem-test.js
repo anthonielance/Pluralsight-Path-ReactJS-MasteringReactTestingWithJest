@@ -1,4 +1,5 @@
 jest.dontMock('../../../app/components/CartItem');
+jest.dontMock('jquery');
 
 var TestUtils = require('react-addons-test-utils');
 var React = require('react');
